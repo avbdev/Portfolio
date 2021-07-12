@@ -14,10 +14,10 @@ export const DropDownContainer = styled.div`
   cursor: default;
   overflow: hidden;
   transition: 0.3s ease;
-  visibility: ${({ active }) => active ? 'visible' : 'hidden'};
-  opacity: ${({ active }) => active ? '1' : '0'};
+  visibility: ${({ active }:any) => active ? 'visible' : 'hidden'};
+  opacity: ${({ active }:any) => active ? '1' : '0'};
   transform-origin: top;
-  transform: ${({ active }) => active ? 'scaleY(1)' : 'scaleY(.3)'};
+  transform: ${({ active }:any) => active ? 'scaleY(1)' : 'scaleY(.3)'};
 
   @media ${(props) => props.theme.breakpoints.md} {
     top: 32px;
