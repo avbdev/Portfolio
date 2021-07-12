@@ -14,6 +14,25 @@ const data = [
   { number: 5000, text: "Github Stars" },
 ];
 
-const Accomplishments: React.FC = () => <div>Accomplishments</div>;
+const Accomplishments: React.FC = () => {
+  return (
+    <Section>
+      <SectionDivider />
+      <SectionTitle style={{ paddingTop: "4rem" }}>
+        Accomplishments
+      </SectionTitle>
+      <Boxes>
+        {data.map((d, i) => {
+          return (
+            <Box key={i}>
+              <BoxNum>{d.number}</BoxNum>
+              <BoxText>{d.text}</BoxText>
+            </Box>
+          );
+        })}
+      </Boxes>
+    </Section>
+  );
+};
 
 export default Accomplishments;

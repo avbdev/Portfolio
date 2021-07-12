@@ -1,5 +1,5 @@
 
-import styled from 'styled-components'
+import styled, { StyledComponent } from 'styled-components'
 
 export const CarouselContainer = styled.ul`
   max-width: 1040px;
@@ -32,7 +32,7 @@ export const CarouselContainer = styled.ul`
     margin-bottom: 8px;
   }
 `
-export const CarouselMobileScrollNode = styled.div`
+export const CarouselMobileScrollNode:StyledComponent<"div", any, any, never> = styled.div`
   @media ${props => props.theme.breakpoints.sm} {
     display: flex;
     min-width: ${({ final }:any) => final ? `120%;` : `min-content`}
@@ -130,7 +130,7 @@ export const CarouselButtons = styled.div`
   }
 `
 
-export const CarouselButton = styled.button`
+export const CarouselButton: StyledComponent<"button", any, any, never> = styled.button`
   box-sizing: border-box;
   background: none;
   padding: 4px;
@@ -145,7 +145,7 @@ export const CarouselButton = styled.button`
   }
 `
 
-export const CarouselButtonDot = styled.div`
+export const CarouselButtonDot: StyledComponent<"div", any, any, never> = styled.div`
   background-color: white;
   border-radius: 10px;
   margin: auto;

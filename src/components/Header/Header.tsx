@@ -54,23 +54,34 @@ const Header: React.FC = () => {
     </Div2>
   );
 
-  interface ISocialIconList {
-    icon: React.FC | IconType;
-    route: string;
-  }
-  const SocialLinks: ISocialIconList[] = [
-    { icon: () => <AiFillGithub size="3rem" />, route: "https://github.com" },
-    {
-      icon: () => <AiFillLinkedin size="3rem" />,
-      route: "https://linkedin.com",
-    },
-    {
-      icon: () => <AiFillInstagram size="3rem" />,
-      route: "https://instagram.com",
-    },
-  ];
+  return (
+    <Container>
+      {/* {Logo} */}
+      {NavLinks}
+      <Social />
+    </Container>
+  );
+};
 
-  const Social = (
+interface ISocialIconList {
+  icon: React.FC | IconType;
+  route: string;
+}
+
+const SocialLinks: ISocialIconList[] = [
+  { icon: () => <AiFillGithub size="3rem" />, route: "https://github.com" },
+  {
+    icon: () => <AiFillLinkedin size="3rem" />,
+    route: "https://linkedin.com",
+  },
+  {
+    icon: () => <AiFillInstagram size="3rem" />,
+    route: "https://instagram.com",
+  },
+];
+
+export const Social: React.FC = () => {
+  return (
     <Div3>
       {SocialLinks.map((data, index: number) => {
         return (
@@ -85,13 +96,5 @@ const Header: React.FC = () => {
       })}
     </Div3>
   );
-  return (
-    <Container>
-      {/* {Logo} */}
-      {NavLinks}
-      {Social}
-    </Container>
-  );
 };
-
 export default Header;
