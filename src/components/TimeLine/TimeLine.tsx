@@ -21,7 +21,7 @@ import { TimeLineData } from "../../constants/constants";
 
 const TOTAL_CAROUSEL_COUNT = TimeLineData.length;
 
-const Timeline = () => {
+const Timeline: React.FC = () => {
   const [activeItem, setActiveItem] = useState(0);
   const carouselRef: any = useRef();
 
@@ -97,10 +97,7 @@ const Timeline = () => {
     <Section id="about">
       <SectionDivider />
       <SectionTitle style={{ paddingTop: "4rem" }}>About me</SectionTitle>
-      <SectionText>
-        This is a very very long description, which will be replaced once the
-        component design is done.
-      </SectionText>
+      <SectionText></SectionText>
 
       <CarouselContainer ref={carouselRef} onScroll={handleScroll}>
         <>

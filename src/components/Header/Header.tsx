@@ -35,7 +35,7 @@ const Header: React.FC = () => {
   );
 
   const links: any[] = [
-    { name: "Projects", route: "#projects" },
+    // { name: "Projects", route: "#projects" },
     { name: "Technologies", route: "#tech" },
     { name: "About", route: "#about" },
   ];
@@ -56,8 +56,8 @@ const Header: React.FC = () => {
 
   return (
     <Container>
-      {/* {Logo} */}
-      {NavLinks}
+      {Logo}
+      {/* {NavLinks} */}
       <Social />
     </Container>
   );
@@ -69,14 +69,17 @@ interface ISocialIconList {
 }
 
 const SocialLinks: ISocialIconList[] = [
-  { icon: () => <AiFillGithub size="3rem" />, route: "https://github.com" },
+  {
+    icon: () => <AiFillGithub size="3rem" />,
+    route: "https://github.com/avbhardwaj",
+  },
   {
     icon: () => <AiFillLinkedin size="3rem" />,
-    route: "https://linkedin.com",
+    route: "https://linkedin.com/in/avbhardwaj",
   },
   {
     icon: () => <AiFillInstagram size="3rem" />,
-    route: "https://instagram.com",
+    route: "https://instagram.com/avbhardwaj",
   },
 ];
 

@@ -7,20 +7,28 @@ import {
 } from "../../styles/GlobalComponents";
 import Button from "../../styles/GlobalComponents/Button";
 import { LeftSection } from "./HeroStyles";
+import { BsDownload } from "react-icons/bs";
 
 const Hero: React.FC = (props) => {
   return (
     <Section row nopadding>
       <LeftSection>
         <SectionTitle main center>
-          Bhardwaj <br />
-          Avasarala
+          Web <br />
+          Portfolio
         </SectionTitle>
         <SectionText>
           I'm a Software Developer and this is a portfolio to show the projects
           I have been working on.
         </SectionText>
-        <Button onClick={() => {}}>Learn More</Button>
+        <a href="Bhardwaj_Resume_.pdf" download>
+          <Button onClick={() => {}}>
+            Resume{" "}
+            <div style={{ paddingLeft: 15, paddingTop: 4 }}>
+              <BsDownload />
+            </div>
+          </Button>
+        </a>
       </LeftSection>
     </Section>
   );
