@@ -71,7 +71,7 @@ interface ISocialIconList {
 const SocialLinks: ISocialIconList[] = [
   {
     icon: () => <AiFillGithub size="3rem" />,
-    route: "https://github.com/avbhardwaj",
+    route: "https://github.com/avbdev",
   },
   {
     icon: () => <AiFillLinkedin size="3rem" />,
