@@ -20,8 +20,7 @@ const Technologies: React.FC = () => {
       <SectionDivider />
       <SectionTitle style={{ paddingTop: "4rem" }}>Technologies</SectionTitle>
       <SectionText>
-        I have worked on various projects exploring different technologies in
-        Frontend and Backend.
+        I have worked on various projects in Frontend and Backend.
       </SectionText>
       <List>
         <ListItem>
@@ -30,7 +29,7 @@ const Technologies: React.FC = () => {
             <ListTitle>Frontend</ListTitle>
             <ListParagraph>
               Experience with <br />
-              React.js, Typescript, Node.js
+              React.js, Typescript, Node.js, Javascript
             </ListParagraph>
           </ListContainer>
         </ListItem>
@@ -41,7 +40,7 @@ const Technologies: React.FC = () => {
             <ListTitle>Backend</ListTitle>
             <ListParagraph>
               Experience with <br />
-              .NET, python, Node.js
+              .NET, Node.js, Swift
             </ListParagraph>
           </ListContainer>
         </ListItem>

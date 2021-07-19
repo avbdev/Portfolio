@@ -17,10 +17,7 @@ const Hero: React.FC = (props) => {
           Web <br />
           Portfolio
         </SectionTitle>
-        <SectionText>
-          I'm a Software Developer and this is a portfolio to show the projects
-          I have been working on.
-        </SectionText>
+        <SectionText>I'm a Software Developer.</SectionText>
         <a href="Bhardwaj_Resume_.pdf" download>
           <Button onClick={() => {}}>
             Resume{" "}
