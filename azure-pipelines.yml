@@ -1,0 +1,55 @@
+# Node.js with React
+# Build a Node.js project that uses React.
+# Add steps that analyze code, save build artifacts, deploy, and more:
+# https://docs.microsoft.com/azure/devops/pipelines/languages/javascript
+
+trigger:
+- main
+
+pool:
+  vmImage: ubuntu-latest
+
+
+steps:
+- task: NodeTool@0
+  displayName: 'Use Node 14.x'
+  inputs:
+    versionSpec: 14.x
+
+- task: Npm@1
+  displayName: 'Install yarn'
+  inputs:
+    command: custom
+    verbose: false
+    customCommand: 'install -g yarn'
+
+- script: |
+   yarn install
+   
+  workingDirectory: '$(Parameters.workingDirectory)'
+  displayName: 'Install package dependencies'
+
+- script: 'yarn build'
+  workingDirectory: '$(Parameters.workingDirectory)'
+  displayName: 'Build UI'
+
+- task: Npm@1
+  displayName: 'Install Firebase'
+  inputs:
+    command: custom
+    verbose: false
+    customCommand: 'install -g firebase-tools'
+
+- script: 'yarn global add firebase'
+  displayName: 'Install Firebase'
+  enabled: false
+
+- script: 'firebase deploy --token $(FirebaseToken)'
+  displayName: 'Deploy to firebase'
+
+- task: PublishBuildArtifacts@1
+  displayName: 'Publish Artifact: drop'
+  inputs:
+    publishLocation: FilePath
+  enabled: false
+
