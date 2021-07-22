@@ -22,9 +22,7 @@ steps:
     verbose: false
     customCommand: 'install -g yarn'
 
-- script: |
-   yarn install
-   
+- script: 'yarn install'
   workingDirectory: '$(Parameters.workingDirectory)'
   displayName: 'Install package dependencies'
 
