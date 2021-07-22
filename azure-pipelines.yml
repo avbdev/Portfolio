@@ -23,11 +23,9 @@ steps:
     customCommand: 'install -g yarn'
 
 - script: 'yarn install'
-  workingDirectory: '$(Parameters.workingDirectory)'
   displayName: 'Install package dependencies'
 
 - script: 'yarn build'
-  workingDirectory: '$(Parameters.workingDirectory)'
   displayName: 'Build UI'
 
 - task: Npm@1
